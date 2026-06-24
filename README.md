@@ -1,5 +1,7 @@
 # openbank-accounts
 
+[![CI](https://github.com/Sreenivas-Sadhu-Prabhakara/openbank-accounts/actions/workflows/ci.yml/badge.svg)](https://github.com/Sreenivas-Sadhu-Prabhakara/openbank-accounts/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)](https://go.dev)
+
 The **Accounts (AIS)** microservice — the BIAN *Customer Position / Current Account* service domain, exposing the OBIE **AISP** read APIs: accounts, balances and transactions.
 
 Every request is consent-protected. The caller supplies the consent id via the `x-consent-id` header; the service validates it against the consent service (type `account-access`, status `Authorised`, and the right `Read*` permission) before returning data.
